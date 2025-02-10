@@ -1,0 +1,133 @@
+/* Intro Text */
+.intro-text {
+    font-size: 1.1rem;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: green;
+}
+
+/* Profile Link */
+.profile-link {
+    color: black;
+    text-decoration: none;
+}
+
+/* Profile Header */
+.profile-header {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    border-radius: 1.5rem;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Profile Name */
+.profile-name {
+    margin-left: 230px;
+    margin-top: 15px;
+}
+
+/* Bio Section */
+.bio-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 0.5rem;
+}
+
+/* Work Experience */
+.work-experience {
+    gap: 30px;
+}
+
+/* Timeline */
+.timeline {
+    margin-top: 15px;
+    width: 100%;
+    height: 6px;
+    position: relative;
+    background-color: green;
+    border-radius: 3px;
+}
+
+.timeline-config {
+    width: 100%;
+    position: absolute;
+    justify-content: space-between;
+    top: -8px;
+    display: flex;
+    flex-direction: row;
+
+    gap: 20px;
+}
+
+.timeline-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dot-done {
+    width: 25px;
+    height: 25px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.dot {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border: 3px solid darkorange;
+    border-radius: 50%;
+}
+
+.dot-comming {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid green;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+img,
+.no-drag {
+	-webkit-user-drag: none;
+	user-drag: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
