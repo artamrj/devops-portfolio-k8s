@@ -23,6 +23,24 @@ spec:
                 name: devops-portfolio-config
             - secretRef:
                 name: devops-portfolio-secret
+          # Liveness Probe: Checks if container is still running
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 15
+            timeoutSeconds: 2
+            failureThreshold: 3
+          # Readiness Probe: Checks if container is ready to serve traffic
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 1
+            failureThreshold: 3
           resources:
             requests:
               cpu: "20m"
