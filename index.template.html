@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My LinkedIn-Style Profile</title>
+  <title>${PAGE_NAME}</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,28 +13,27 @@
   <div class="container-xl bg-white p-4">
     <div class="d-flex flex-row justify-content-between mx-3">
       <div class="intro-text">
-        they call me <span class="highlight">Arta</span>, so you can ;)
+        they call me <span class="highlight">${NICK_NAME}</span>, so you can ;)
       </div>
       <div>
-        <a href="https://linktr.ee/artamrj" class="profile-link">linktr.ee/artamrj</a>
+        <a href="https://${LINKTREE_URL}" class="profile-link">${LINKTREE_URL}</a>
       </div>
     </div>
 
     <div class="profile-header mt-2">
 
-      <!-- Header Background Image -->
-      <img src="https://i.ibb.co/FLJ94TX0/image-5.png" alt="Header Background" class="header-image">
+      <img src="${HEADER_IMAGE_URL}" alt="Header Background" class="header-image">
 
       <div class="profile-picture">
         <img
-          src="https://media.licdn.com/dms/image/v2/D4E03AQHhhPL4winPlA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1700493169537?e=1744848000&v=beta&t=ptNRF5EtTGR4ISRjg3Gh69eT16devXCKstMapwOp0NI"
-          alt="Arta">
+          src="${PROFILE_IMAGE_URL}"
+          alt="${NICK_NAME}">
       </div>
 
     </div>
 
     <div class="d-flex align-items-center profile-name">
-      <h1>Mohammadreza Javadi<span style="font-weight: lighter;">kouchaksaraei</span></h1>
+      <h1>${NAME}<span style="font-weight: lighter;">${LASTNAME_PLACE}</span></h1>
     </div>
 
     <div class="bio-section">
