@@ -25,9 +25,7 @@
       <img src="${HEADER_IMAGE_URL}" alt="Header Background" class="header-image">
 
       <div class="profile-picture">
-        <img
-          src="${PROFILE_IMAGE_URL}"
-          alt="${NICK_NAME}">
+        <img src="${PROFILE_IMAGE_URL}" alt="${NICK_NAME}">
       </div>
 
     </div>
@@ -159,10 +157,42 @@
         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"></a>
       </div>
 
-      <h1 style="flex-shrink: 3;">ANTWORTEN, DIE UNS ZUSAMMEN FÜHREN!</h1>
+      <div class="d-flex flex-column" style="flex-shrink: 3; gap: 40px;">
+        <h1>ANTWORTEN, DIE UNS ZUSAMMEN FÜHREN!</h1>
+
+        <div class="card border-danger">
+          <div class="card-body">
+            <h5 class="card-title" style="font-family: monospace;">Unser geheimes Kennwort</h5>
+            <p class="card-text" id="passwordField"></p>
+            <button id="toggleButton" class="btn btn-danger">Kennwort anzeigen</button>
+          </div>
+        </div>
+
+      </div>
     </div>
 
   </div>
+
+  <script>
+    var actualPassword = "${PASSWORD}";
+    var maskedPassword = "*".repeat(actualPassword.length);
+    var isVisible = false;
+    var passwordField = document.getElementById("passwordField");
+    var toggleButton = document.getElementById("toggleButton");
+
+    passwordField.textContent = maskedPassword;
+
+    toggleButton.onclick = function () {
+      if (isVisible) {
+        passwordField.textContent = maskedPassword;
+        toggleButton.textContent = "Kennwort anzeigen";
+      } else {
+        passwordField.textContent = actualPassword;
+        toggleButton.textContent = "Kennwort verbergen";
+      }
+      isVisible = !isVisible;
+    };
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
