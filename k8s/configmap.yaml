@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devops-portfolio-config
+data:
+  PAGE_NAME: "My DevOps Portfolio"
+  NICK_NAME: "Arta"
+  LINKTREE_URL: "linktr.ee/artamrj"
+  NAME: "Mohammadreza Javadi"
+  LASTNAME_PLACE: "kouchaksaraei"
+  HEADER_IMAGE_URL: "https://i.ibb.co/FLJ94TX0/image-5.png"
+  PROFILE_IMAGE_URL: "https://media.licdn.com/dms/image/v2/D4E03AQHhhPL4winPlA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1700493169537?e=1744848000&v=beta&t=ptNRF5EtTGR4ISRjg3Gh69eT16devXCKstMapwOp0NI"
