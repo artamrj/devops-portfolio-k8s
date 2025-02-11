@@ -21,6 +21,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: devops-portfolio-config
+            - secretRef:
+                name: devops-portfolio-secret
           resources:
             requests:
               cpu: "20m"
