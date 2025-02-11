@@ -15,6 +15,7 @@ spec:
       containers:
         - name: devops-portfolio-k8s
           image: artaa/devops-portfolio-k8s:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
           resources:
