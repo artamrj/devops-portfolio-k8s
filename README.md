@@ -18,6 +18,9 @@ A demonstration project showcasing how to deploy a simple, parameterized HTML pa
 - [Project Structure](#project-structure)
 - [Further Considerations](#further-considerations)
 
+#### Complete Process Documentation in German
+- [Full Process Documentation](DOKUMENTATION.md)
+- [Issues Encountered During Implementation](PROBLEMS.md)
 
 ## Overview
 
