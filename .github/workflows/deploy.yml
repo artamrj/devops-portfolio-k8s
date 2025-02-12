@@ -1,0 +1,37 @@
+name: Deploy to GKE
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
+  CLUSTER_NAME: ${{ secrets.GKE_CLUSTER }}
+  CLUSTER_ZONE: ${{ secrets.GKE_ZONE }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the code from the repo
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Set up the Google Cloud SDK using your service account key
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          service_account_key: ${{ secrets.GKE_SA_KEY }}
+          project_id: ${{ secrets.GKE_PROJECT }}
+
+      # 3. Get GKE cluster credentials to enable kubectl commands
+      - name: Authenticate with GKE
+        run: |
+          gcloud container clusters get-credentials $CLUSTER_NAME --zone $CLUSTER_ZONE --project $PROJECT_ID
+
+      # 4. Deploy your Kubernetes manifests from the k8s folder
+      - name: Deploy Kubernetes Manifests
+        run: |
+          kubectl apply -f k8s/
