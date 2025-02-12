@@ -158,7 +158,7 @@ devops-portfolio-k8s/
 ├── dockerfile              # Dockerfile for building the image
 ├── docker-compose.yaml     # Docker Compose configuration for local deployment
 ├── README.md               # This file (project overview)
-├── TIMELINE.md             # Detailed project development documentation
+├── DOKUMENTATION.md        # Detailed project development documentation
 └── PROBLEMS.md             # Troubleshooting guide for common issues
 ```
 
