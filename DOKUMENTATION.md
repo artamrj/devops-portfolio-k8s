@@ -20,12 +20,8 @@
    4.7. [Horizontal Pod Autoscaler (HPA)](#47-horizontal-pod-autoscaler-hpa)  
 5. [Zusammenfassung](#zusammenfassung)
 
----
-
 ## Einleitung
-In diesem Dokument beschreibe ich meinen Workflow bei der Umsetzung eines Kubernetes-Projekts, das ich im Rahmen meines Bewerbungsprozesses als Werkstudent realisiert habe. Dabei dokumentiere ich ausschließlich die durchgeführten Schritte sowie die dazugehörigen Befehle, ohne auf Probleme oder Fehlermeldungen einzugehen.
-
----
+In diesem Dokument beschreibe ich meinen Workflow bei der Umsetzung eines Kubernetes-Projekts. Dabei dokumentiere ich ausschließlich die durchgeführten Schritte sowie die dazugehörigen Befehle.
 
 ## Grundlegende Einrichtung
 
@@ -43,7 +39,6 @@ Danach habe ich den Minikube-Cluster gestartet:
 minikube start
 ```
 
----
 
 ## Erstes Testprojekt mit Docker und Kubernetes
 *(Das ist nur ein Test für mich selbst, um das Konzept von Docker Hub und Minikube zu verstehen und zu testen.)*
@@ -81,8 +76,6 @@ Schließlich wurde das einfache Webprojekt über den NodePort abgerufen:
 ```bash
 minikube service <service-name>
 ```
-
----
 
 ## Projekt: devops-portfolio-k8s
 Nach dem erfolgreichen Test habe ich mein eigentliches Projekt namens **"devops-portfolio-k8s"** aufgesetzt. Ziel war es, eine kleine Webanwendung (HTML/CSS/Bootstrap) zu erstellen, die mit NGINX ausgeliefert wird, und darauf aufbauend Kubernetes-Funktionen (ConfigMaps, Secrets, Probes, HPA) zu demonstrieren.
@@ -268,8 +261,6 @@ devops-portfolio-k8s-hpa   Deployment/devops-portfolio-k8s   cpu: 5%/20%    1   
 devops-portfolio-k8s-hpa   Deployment/devops-portfolio-k8s   cpu: 5%/20%    1         5         2          34m
 devops-portfolio-k8s-hpa   Deployment/devops-portfolio-k8s   cpu: 5%/20%    1         5         1          34m
 ```
-
----
 
 ## Zusammenfassung
 - **Minikube** aufgesetzt, um ein lokales Kubernetes-Cluster zu betreiben.  
