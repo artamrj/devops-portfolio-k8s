@@ -16,6 +16,7 @@ A demonstration project showcasing how to deploy a simple, parameterized HTML pa
     - [Docker Compose](#docker-compose)
   - [Deployment on Minikube](#deployment-on-minikube)
 - [Project Structure](#project-structure)
+- [Deployment on Google Cloud](#deployment-on-google-cloud)
 - [Further Considerations](#further-considerations)
 
 #### Complete Process Documentation in German
@@ -144,6 +145,25 @@ For a full Kubernetes test—including health probes, environment variable manag
    ```
 
    This command opens your default web browser to the application’s NodePort.
+
+
+Below is an example section you can add to your README to describe that your project is deployed on Google Cloud using GitHub Actions. You can adjust the wording as needed:
+
+---
+
+### Deployment on Google Cloud
+
+In addition to the local and Minikube deployment methods described above, this project is also automatically deployed to Google Cloud via GitHub Actions. The CI/CD pipeline is configured to:
+
+- Build the Docker image upon code changes.
+- Push the updated image to Docker Hub.
+- Update the Kubernetes deployment on Google Kubernetes Engine (GKE) with the new image.
+
+The live application is running on GKE and can be accessed at:
+
+[http://34.38.71.209](http://34.38.71.209)
+
+*Note:* This deployment is for demonstration purposes. For a detailed overview of the deployment process, please refer to the [DOKUMENTATION.md](DOKUMENTATION.md) file.
 
 ## Project Structure
 
